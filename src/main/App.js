@@ -8,7 +8,7 @@ import {Router} from '../components/Router';
 
 const AppRootComponent = () => {
     return (
-        <div className="app container">
+        <div className="app-root">
             <Navigation options={Router.routes} />
         </div>
     )

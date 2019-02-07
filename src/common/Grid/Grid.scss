@@ -1,0 +1,46 @@
+/* Basic Grid System with flexbox */
+$grid-columns: 12;
+
+@function calc_grid_col($i, $full-width) {
+    @return ($full-width * $i) / $grid-columns;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.grid-item {
+    $item: col;
+
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+
+    &.#{$item}-flex  {
+        flex: auto;
+        flex-basis: 20%; // normal
+        @media(max-width: 1073px) {
+            flex-basis: 33.33%;
+        }
+
+        @media(max-width: 815px) {
+            flex-basis: 50%;
+        }
+
+        @media(max-width: 555px) {
+            flex-basis: 100%;
+        }
+    }
+
+    /* this one if you dont use flex-basis */
+    @for $i from 1 through $grid-columns {
+        &.#{item}-#{$i} {
+            width: unquote(calc_grid_col($i, 100) +'%');
+        }
+    }
+
+}
+/* [END] Basic Grid System with flexbox */

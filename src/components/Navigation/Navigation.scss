@@ -1,0 +1,32 @@
+$nav: nav-bar;
+
+.header-nav {
+
+    font-weight: 500;
+    &.nav__bg-color {
+        background-color: #20232a;
+        & > * {
+            color: #fff;
+        }
+    }
+
+    .#{$nav} {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 60px;
+        .#{$nav}__block {
+            display: flex;
+            flex-direction: row;
+            .#{$nav}__element {
+                list-style: none;
+                padding: 10px;
+            }
+        }
+
+        a, a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,7 +1,27 @@
-.app {
-    .block {
-        background: rgb(102, 7, 62);
-        width: 100px;
-        height: 100px;
-    }
+*, body, html {
+    margin: 0;
+}
+
+.app-root {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header__bg-color {
+    background-color: #282c34;
+    color: #fff;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    background-color: rgb(128, 125, 125);
+    color: #fff;
+    text-decoration: none;
 }

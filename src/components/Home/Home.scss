@@ -1,0 +1,19 @@
+
+.content-block, .button-block {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.heading {
+    padding: 7.5px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    position: relative;
+}
+
+.fixed-height {
+    height: 85px;
+}
